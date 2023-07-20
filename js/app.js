@@ -9,7 +9,7 @@ search.addEventListener('keyup', e => {
     let searchValue = e.target.value.toLowerCase();
     let cards = document.querySelectorAll('a.imgcard');
     cards.forEach(card => {
-        if (card.textContent.toLocaleLowerCase().includes(searchValue)) {
+        if (card.textContent.toLowerCase().includes(searchValue)) {
             card.parentNode.style.display = 'grid';
         } else {
             card.parentNode.style.display = 'none';
