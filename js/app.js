@@ -4,15 +4,17 @@ baguetteBox.run('.grid');
 
 // Search Filter original code
 
-const search = document.getElementById(`search`);
-search.addEventListener('keyup', e => {
+const searchBar = document.getElementById(`search`);
+searchBar.addEventListener('keyup', e => {
     let searchValue = e.target.value.toLowerCase();
-    let cards = document.querySelectorAll('a.imgcard');
-    cards.forEach(card => {
-        if (card.textContent.toLowerCase().includes(searchValue)) {
-            card.parentNode.style.display = 'grid';
+    let card = document.querySelectorAll('a.imgcard');
+    card.forEach(card => {
+        let dataCap = card.getAttribute('data-caption');
+        if (dataCap.toLowerCase().includes(searchValue)) {
+            card.style.display = 'grid';
         } else {
-            card.parentNode.style.display = 'none';
+            card.style.display = 'none';
         }
     });
 });
+
