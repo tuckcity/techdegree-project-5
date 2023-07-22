@@ -1,8 +1,10 @@
 baguetteBox.run('.grid');
-// const search = new Filter('search', 'data-caption');
 
+// ========== searchFilter.js
+//  const search = new Filter('search', 'data-caption');
+// ==========
 
-// Search Filter original code
+// Custom filter 
 
 const searchBar = document.getElementById(`search`);
 searchBar.addEventListener('keyup', e => {
